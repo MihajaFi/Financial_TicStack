@@ -6,7 +6,7 @@
 ## Requests:
 >Everyone's opinion is important to make our requests in order to better develop the web interface: 
 
-For the moment it is the selects that we have put in evidence:
+For the moment they are the selects that we have put in evidence:
 - How much money is there?
 - Who are the users that have paid? -When and 
 - How much did they pay?
