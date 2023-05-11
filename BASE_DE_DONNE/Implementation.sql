@@ -13,7 +13,7 @@ CREATE TABLE "user"(
   create_date Date NOT NULL,
   occupation Varchar(250) NOT NULL,
   "address" VARCHAR(300),
-  contact int
+  contact VARCHAR(50)
 );
 
 -- group_account
