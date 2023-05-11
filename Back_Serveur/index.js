@@ -1,8 +1,16 @@
 const express = require("express");
 const { Pool } = require("pg");
 const app = express();
+const path = require("path");
 
+
+// Configure le moteur de rendu EJS
+app.set("view engine", "ejs")
+app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "public")));
 //Connect Database 
+
+
 
 const pool = new Pool({
     user: "postgres",
@@ -20,5 +28,6 @@ app.listen(3000, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Bonjour le monde...");
+  // res.send("Bonjour le monde...");
+  res.render("index");
 });

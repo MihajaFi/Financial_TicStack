@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "faker": "^5.5.3",
-=======
   "name": "financial_ticstack",
   "version": "1.0.0",
   "description": "------------------------------------\r > This is first project of group TicStack \r  This project aims to manipulate and look at the finance of the group  \r # To work in this projet : \r - Fork this repository \r - Clone it to your local machine\r -",
@@ -24,7 +20,6 @@
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.18.2",
->>>>>>> caf6b1423b29786b6d139189c727cec5db750588
     "pg": "^8.10.0"
   }
 }
