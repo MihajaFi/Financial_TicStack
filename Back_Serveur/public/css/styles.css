@@ -128,13 +128,23 @@ a {
     left: 0;
     background-color: var(--container-color);
     box-shadow: 1px 0 4px hsla(228, 81%, 49%, .15);
-    width: 84px;
+    width: 100px;
     height: 100vh;
     padding: 2rem;
     transition: .3s;
+    z-index: 0;
+  }
+  .nav__logo-image{
+    display: flex;
+    width: 2cm;
+    height: 2cm;
+    position: absolute;
+    top: 7%;
   }
   .nav__logo {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .nav__logo i {
     font-size: 1.25rem;
@@ -143,6 +153,10 @@ a {
   .nav__logo-name {
     color: var(--title-color);
     font-weight: 600;
+    position: absolute;
+  }
+  .hidden{
+    visibility: hidden;
   }
   .nav__logo, .nav__link {
     align-items: center;
