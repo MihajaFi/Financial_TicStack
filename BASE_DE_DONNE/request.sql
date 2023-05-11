@@ -4,11 +4,10 @@ SELECT SUM("money") as Our_sum FROM group_account;
 -- Who are the users that have paid? -When and how much
 SELECT "user".*, payement_date, "value" FROM "user"
 INNER JOIN pay ON "user".id_user = "pay".id_user;
-
 -- How much did they pay?
 SELECT "value" FROM pay 
 INNER JOIN "user" ON pay.id = "user".id_user
-WHERE "user".user_name ='Malala' AND pay.week = '2023-01-15';
+WHERE "user".user_name ='' AND pay.week = '2022-05-16';
 
 -- How much did the group spend?
 SELECT "value" FROM withdrawal 
