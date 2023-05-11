@@ -20,7 +20,7 @@ CREATE TABLE group_account(
   id_account SERIAL PRIMARY KEY,
   "money" Double Precision NOT NULL
 );
--- pay
+-- pay 
 DROP TABLE IF EXISTS pay;
 CREATE TABLE pay(
   id SERIAL PRIMARY KEY,
