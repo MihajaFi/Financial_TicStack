@@ -5,4 +5,15 @@
 # To work in this projet : 
 - Fork this repository 
 - Clone it to your local machine
-- 
+
+
+### The technologie for backend 
+ > Node.js
+ > Express
+ > Postgresql
+
+### The technologie for frontend 
+
+> HTML 
+> CSS
+> Tailwind 
