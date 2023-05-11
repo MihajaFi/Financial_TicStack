@@ -14,3 +14,4 @@ For the moment they are the selects that we have put in evidence:
 - Users who have not yet paid last week 
 - What kind of user is this?
 - How much did the group earn in a month
+- How to see all activity that we are spending our money
