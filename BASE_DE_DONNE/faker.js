@@ -10,7 +10,7 @@ for (let i = 0; i < 1000; i++) {
     const user_first_name = faker.name.findName().slice(0, 100);
     const gender = faker.random.arrayElement(['M', 'F']);
     const birth_date = faker.date.between(minDate, maxDate).toString().slice(0, 15);
-    const  create_date = faker.date.between(minDate, maxDate).toString().slice(0, 15);
+    const  create_deate = faker.date.between(minDate, maxDate).toString().slice(0, 15);
     const occupation =  "This is a test ";
     
     // Create the insert statement
