@@ -20,39 +20,39 @@ for (let i = 0; i < 1000; i++) {
 }
 
 
-//For group_account:
-for (let i = 0; i < 1000; i++){
-    const money = faker.datatype.number();
-    const insertStatement = `INSERT INTO group_account VALUES ('${money}${","+ i}';)`;
-    console.log("");
-    console.log(insertStatement);
+// //For group_account:
+// for (let i = 0; i < 1000; i++){
+//     const money = faker.datatype.number();
+//     const insertStatement = `INSERT INTO group_account VALUES ('${money}${","+ i}';)`;
+//     console.log("");
+//     console.log(insertStatement);
 
-}
+// }
 
-// For pay:
-for (let i = 0; i < 100; i++) {
-    const value = faker.datatype.number();
-    const payement_date = `${faker.date.between(2021, 2023)} ;`
-    const reason = "This is a test ";
-    const id_user = i;
-    const id_group_account = i;
+// // For pay:
+// for (let i = 0; i < 100; i++) {
+//     const value = faker.datatype.number();
+//     const payement_date = `${faker.date.between(2021, 2023)} ;`
+//     const reason = "This is a test ";
+//     const id_user = i;
+//     const id_group_account = i;
 
-    // Create the insert statement
-    const insertStatement = `INSERT INTO "user" VALUES ('${value}${","+ i}'', '${payement_date}','${reason}','${id_user}','${id_group_account}';`;
-    console.log("");
-    console.log(insertStatement);
+//     // Create the insert statement
+//     const insertStatement = `INSERT INTO "user" VALUES ('${value}${","+ i}'', '${payement_date}','${reason}','${id_user}','${id_group_account}';`;
+//     console.log("");
+//     console.log(insertStatement);
 
-}
+// }
 
-//For withdrawal:
-for (let i = 0; i < 1000; i++) {
-  const value = faker.datatype.number();
-  const withdrawal_date  = `${faker.date.between(2021, 2023)}`;
-  const reason = "This is e test ";
-  const id_user = i;
-  const id_group_account = i;
-    // Create the insert statement
-    const insertStatement = `INSERT INTO group VALUES ('${value}${","+ i}'', '${withdrawal_date}','${reason}','${id_user}','${id_group_account}');`;
-    console.log("");
-    console.log(insertStatement);
-}
+// //For withdrawal:
+// for (let i = 0; i < 1000; i++) {
+//   const value = faker.datatype.number();
+//   const withdrawal_date  = `${faker.date.between(2021, 2023)}`;
+//   const reason = "This is e test ";
+//   const id_user = i;
+//   const id_group_account = i;
+//     // Create the insert statement
+//     const insertStatement = `INSERT INTO group VALUES ('${value}${","+ i}'', '${withdrawal_date}','${reason}','${id_user}','${id_group_account}');`;
+//     console.log("");
+//     console.log(insertStatement);
+// }
