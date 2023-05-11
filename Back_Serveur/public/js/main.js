@@ -6,6 +6,7 @@ function colorLink(){
     this.classList.add('active-link')
 }
 
+
 linkColor.forEach(l => l.addEventListener('click', colorLink))
 
 /*=============== SHOW HIDDEN MENU ===============*/
@@ -17,6 +18,7 @@ const showMenu = (toggleId, navbarId) =>{
         toggle.addEventListener('click', ()=>{
             /* Show menu */
             navbar.classList.toggle('show-menu')
+
             /* Rotate toggle icon */
             toggle.classList.toggle('rotate-icon')
         })
