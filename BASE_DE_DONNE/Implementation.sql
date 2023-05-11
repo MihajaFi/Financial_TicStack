@@ -11,7 +11,9 @@ CREATE TABLE "user"(
   gender CHAR(1) NOT NULL,
   birth_date Date,
   create_date Date NOT NULL,
-  occupation Varchar(250) NOT NULL
+  occupation Varchar(250) NOT NULL,
+  "address" VARCHAR(300),
+  contact int
 );
 
 -- group_account
@@ -20,7 +22,7 @@ CREATE TABLE group_account(
   id_account SERIAL PRIMARY KEY,
   "money" Double Precision NOT NULL
 );
--- pay
+-- pay 
 DROP TABLE IF EXISTS pay;
 CREATE TABLE pay(
   id SERIAL PRIMARY KEY,
