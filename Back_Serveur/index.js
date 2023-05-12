@@ -28,6 +28,6 @@ app.listen(3000, () => {
 });
 
 app.get("/", (req, res) => {
-  // res.send("Hello word...");
+  // res.send("Bonjour le monde...");
   res.render("index");
 });
