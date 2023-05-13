@@ -10,7 +10,7 @@ CREATE TABLE "user"(
   user_first_name Varchar(250) NOT NULL,
   gender CHAR(1) NOT NULL,
   birth_date Date,
-  create_date Date NOT NULL,
+  create_date Date NOT NULL DEFAULT CURRENT_DATE,
   occupation Varchar(250) NOT NULL,
   "address" VARCHAR(300),
   contact VARCHAR(50)
@@ -20,26 +20,24 @@ CREATE TABLE "user"(
 DROP TABLE IF EXISTS group_account;
 CREATE TABLE group_account(
   id_account SERIAL PRIMARY KEY,
-  "money" Double Precision NOT NULL
+  "money" FLOAT NOT NULL
 );
 -- pay 
 DROP TABLE IF EXISTS pay;
 CREATE TABLE pay(
   id SERIAL PRIMARY KEY,
-  "value" Double Precision NOT NULL,
+  "value" FLOAT NOT NULL,
   payement_date TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   reason Varchar(250) NOT NULL DEFAULT 'participation',
   week Date,
-  id_user SERIAL REFERENCES "user"(id_user),
-  id_group_account SERIAL REFERENCES group_account(id_account)
+  id_user SERIAL REFERENCES "user"(id_user)
 );
 -- withdrawal
 DROP TABLE IF EXISTS withdrawal;
 CREATE TABLE withdrawal(
   id SERIAL PRIMARY KEY,
-  "value" Double Precision NOT NULL,
-  withdrawal_date TimeStamp NOT NULL,
+  "value" FLOAT NOT NULL,
+  withdrawal_date TimeStamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   reason Varchar(250),
-  id_user SERIAL REFERENCES "user"(id_user),
-  id_group_account SERIAL REFERENCES group_account(id_account)
+  id_user SERIAL REFERENCES "user"(id_user)
 );
