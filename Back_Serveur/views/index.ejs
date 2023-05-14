@@ -39,7 +39,7 @@
             <h3>ACCOUNT</h3>
             <i class="bx bx-chevron-right"></i>
           </div>
-          <h1>56</h1>
+          <h1> <%= account %></h1>
         </div>
 
       </div>
@@ -59,37 +59,19 @@
                         <table width="100%">
                             <thead>
                                 <tr>
-                                    <td>modou</td>
-                                    <td>pathe</td>
-                                    <td>demba</td>
+                                    <td>Members</td>
+                                    <td>Value</td>
+                                    <td>Reason</td>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>modou</td>
-                                    <td>dmeba</td>
-                                    <td><span class="status-produit color-one"></span>mass</td>
-                                </tr>
-                                <tr>
-                                    <td>modou</td>
-                                    <td>dmeba</td>
-                                    <td><span class="status-produit color-two"></span>mass</td>
-                                </tr>
-                                <tr>
-                                    <td>modou</td>
-                                    <td>dmeba</td>
-                                    <td><span class="status-produit color-three"></span>mass</td>
-                                </tr>
-                                <tr>
-                                    <td>modou</td>
-                                    <td>dmeba</td>
-                                    <td><span class="status-produit color-four"></span>mass</td>
-                                </tr>
-                                <tr>
-                                    <td>modou</td>
-                                    <td>dmeba</td>
-                                    <td><span class="status-produit color-five"></span>mass</td>
-                                </tr>
+                                <% pay.forEach(p => { %>
+                                    <tr>
+                                      <td><%= p.user_first_name %></td>
+                                      <td><%= p.value %></td>
+                                      <td><%= p.reason %></td>
+                                    </tr>
+                                  <% }) %>
                             </tbody>
                         </table>
                     </div>
@@ -116,9 +98,15 @@
                         </div>
     
                         <div class="user-contact">
-                            <span class="fa fa-facebook"> </span>
-                            <span class="fa fa-whatsapp"></span>
-                            <span class="fa fa-phone"><%= user_element.contact %></span>
+                            <a href="#<%= user_element.facebook %>">
+                                <span class="fa fa-facebook">F </span>
+                            </a>
+                            <a href="<%= user_element.email %>">
+                                <span class="fa fa-email"> M</span>
+                            </a>
+                            <a href="#<%= user_element.contact %>">
+                                <span class="fa fa-phone">P </span>
+                            </a>
                         </div>
                     </div>
                     <% } %> 

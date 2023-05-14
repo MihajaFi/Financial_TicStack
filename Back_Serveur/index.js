@@ -27,29 +27,58 @@ app.listen(8000, () => {
 
 
 
-
 app.get("/", (req, res) => {
-  const query = `
-    SELECT
-      (SELECT COUNT(*) FROM "user") AS count_user,
-      *
-    FROM
-      "user"
-    ORDER BY
-      id_user
+  const countQuery = `
+    SELECT COUNT(*) AS count_user
+    FROM "user"
   `;
 
-  pool.query(query, [], (err, result) => {
+  const userQuery = `
+    SELECT *
+    FROM "user"
+    ORDER BY id_user
+  `;
+
+  const payQuery = `
+    SELECT "user".user_first_name, pay."value", pay.payement_date, pay.reason, pay.week
+    FROM "user"
+    INNER JOIN pay ON "user".id_user = pay.id
+    ORDER BY pay.id
+  `;
+  
+  const accountQuery = `SELECT total_money FROM group_account`;
+
+  pool.query(countQuery, [], (err, countResult) => {
     if (err) {
       console.error(err.message);
       return res.status(500).send('Erreur de serveur');
     }
-    
-      res.render("index", 
-      { 
-        countUser: result.rows[0].count_user,
-        user: result.rows
+
+    pool.query(userQuery, [], (err, userResult) => {
+      if (err) {
+        console.error(err.message);
+        return res.status(500).send('Erreur de serveur');
+      }
+
+      pool.query(payQuery, [], (err, payResult) => {
+        if (err) {
+          console.error(err.message);
+          return res.status(500).send('Erreur de serveur');
+        }
+        pool.query(accountQuery, [], (err, accountResult) => {
+          if (err) {
+            console.error(err.message);
+            return res.status(500).send('Erreur de serveur');
+          }
+
+          res.render("index", {
+            countUser: countResult.rows[0].count_user,
+            user: userResult.rows,
+            pay: payResult.rows,
+            account: accountResult.rows[0].total_money
+          });
+        });
       });
     });
   });
-
+});
