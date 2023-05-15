@@ -15,7 +15,7 @@
             <h3>MEMBERS</h3>
             <i class="bx bx-chevron-right"></i>
           </div>
-          <h1>249</h1>
+          <h1><%= countUser %></h1>
         </div>
 
         <div class="card">
@@ -23,7 +23,7 @@
             <h3>PAY</h3>
             <i class="bx bx-chevron-right"></i>
           </div>
-          <h1>25</h1>
+          <h1>3500.24611</h1>
         </div>
 
         <div class="card">
@@ -39,7 +39,7 @@
             <h3>ACCOUNT</h3>
             <i class="bx bx-chevron-right"></i>
           </div>
-          <h1>56</h1>
+          <h1> <%= account %></h1>
         </div>
 
       </div>
@@ -59,37 +59,19 @@
                         <table width="100%">
                             <thead>
                                 <tr>
-                                    <td>modou</td>
-                                    <td>pathe</td>
-                                    <td>demba</td>
+                                    <td>Members</td>
+                                    <td>Value</td>
+                                    <td>Reason</td>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>modou</td>
-                                    <td>dmeba</td>
-                                    <td><span class="status-produit color-one"></span>mass</td>
-                                </tr>
-                                <tr>
-                                    <td>modou</td>
-                                    <td>dmeba</td>
-                                    <td><span class="status-produit color-two"></span>mass</td>
-                                </tr>
-                                <tr>
-                                    <td>modou</td>
-                                    <td>dmeba</td>
-                                    <td><span class="status-produit color-three"></span>mass</td>
-                                </tr>
-                                <tr>
-                                    <td>modou</td>
-                                    <td>dmeba</td>
-                                    <td><span class="status-produit color-four"></span>mass</td>
-                                </tr>
-                                <tr>
-                                    <td>modou</td>
-                                    <td>dmeba</td>
-                                    <td><span class="status-produit color-five"></span>mass</td>
-                                </tr>
+                                <% pay.forEach(p => { %>
+                                    <tr>
+                                      <td><%= p.user_first_name %></td>
+                                      <td><%= p.value %></td>
+                                      <td><%= p.reason %></td>
+                                    </tr>
+                                  <% }) %>
                             </tbody>
                         </table>
                     </div>
@@ -105,84 +87,29 @@
                 </div>
     
                 <div class="body-case">
+                    <% for (const user_element of user){ %>
                     <div class="all-users">
                         <div class="infos">
                             <img decoding="async" src="/image/fifa.JPG" width="30" height="30">
                             <div>
-                                <h4>Fifaliana</h4>
-                                <small>RAMBELOSON</small>
+                                <h4> <%= user_element.user_first_name %></h4>
+                                <small><%= user_element.user_name %></small>
                             </div>
                         </div>
     
                         <div class="user-contact">
-                            <span class="fa fa-facebook"></span>
-                            <span class="fa fa-whatsapp"></span>
-                            <span class="fa fa-phone"></span>
+                            <a href="#<%= user_element.facebook %>">
+                                <span class="fa fa-facebook">F </span>
+                            </a>
+                            <a href="<%= user_element.email %>">
+                                <span class="fa fa-email"> M</span>
+                            </a>
+                            <a href="#<%= user_element.contact %>">
+                                <span class="fa fa-phone">P </span>
+                            </a>
                         </div>
                     </div>
-                    <div class="all-users">
-                        <div class="infos">
-                            <img decoding="async" src="/image/fifa.JPG" width="30" height="30">
-                            <div>
-                                <h4>Omar</h4>
-                                <small>Embulant</small>
-                            </div>
-                        </div>
-    
-                        <div class="user-contact">
-                            <span class="fa fa-facebook"></span>
-                            <span class="fa fa-whatsapp"></span>
-                            <span class="fa fa-phone"></span>
-                        </div>
-                    </div>
-                    <div class="all-users">
-                        <div class="infos">
-                            <img decoding="async" src="/image/fifa.JPG" width="30" height="30">
-                            <div>
-                                <h4>Omar</h4>
-                                <small>Embulant</small>
-                            </div>
-                        </div>
-    
-                        <div class="user-contact">
-                            <span class="fa fa-facebook"></span>
-                            <span class="fa fa-whatsapp"></span>
-                            <span class="fa fa-phone"></span>
-                        </div>
-                    </div>
-                    <div class="all-users">
-                        <div class="infos">
-                            <img decoding="async" src="/image/fifa.JPG" width="30" height="30">
-                            <div>
-                                <h4>Omar</h4>
-                                <small>Embulant</small>
-                            </div>
-                        </div>
-    
-                        <div class="user-contact">
-                            <span class="fa fa-facebook"></span>
-                            <span class="fa fa-whatsapp"></span>
-                            <span class="fa fa-phone"></span>
-                        </div>
-                    </div>
-                    <div class="all-users">
-                        <div class="infos">
-                            <img decoding="async" src="/image/fifa.JPG" width="30" height="30">
-                            <div>
-                                <h4>Omar</h4>
-                                <small>Embulant</small>
-                            </div>
-                        </div>
-    
-                        <div class="user-contact">
-                            <span class="fa fa-facebook"></span>
-                            <span class="fa fa-whatsapp"></span>
-                            <span class="fa fa-phone"></span>
-                        </div>
-                    </div>
-    
-    
-                </div>
+                    <% } %> 
                 <button class="btn">See more <span class="fa fa-arrow-right"></span></button>
             </div>
     
