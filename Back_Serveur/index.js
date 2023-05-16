@@ -16,7 +16,7 @@ const pool = new Pool({
     user: "postgres",
     host: "localhost",
     database: "finance",
-    password: "12345678" ,//Your password postgresql
+    password: "FifalianA45" ,//Your password postgresql
     port: 5432 // default port on postgresql
   });
   console.log("Connexion réussie à la base de données");
@@ -42,7 +42,7 @@ app.get("/", (req, res) => {
   const payQuery = `
     SELECT "user".user_first_name, pay."value", pay.payement_date, pay.reason, pay.week
     FROM "user"
-    INNER JOIN pay ON "user".id_user = pay.id
+    INNER JOIN pay ON "user".id_user = pay.id_user
     ORDER BY pay.id
   `;
   
@@ -75,7 +75,7 @@ app.get("/", (req, res) => {
             countUser: countResult.rows[0].count_user,
             user: userResult.rows,
             pay: payResult.rows,
-            account: accountResult.rows[0].total_money
+            account: (accountResult.rows && accountResult.rows.length > 0) ? accountResult.rows[0].total_money : 0
           });
         });
       });
