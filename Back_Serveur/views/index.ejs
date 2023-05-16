@@ -1,4 +1,5 @@
 <%- include("_header") -%>
+<<<<<<< HEAD
     <div class="head">
 
 
@@ -6,6 +7,85 @@
         <main class="main-container">
             <div class="main-title">
                 <h2>DASHBOARD</h2>
+=======
+<div class="head">
+ 
+ 
+   <!--=============== MAIN ===============-->
+   <main class="main-container">
+    <div class="main-title">
+        <h2>DASHBOARD</h2>
+      </div>
+
+      <div class="main-cards">
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>MEMBERS</h3>
+            <i class="bx bx-chevron-right"></i>
+          </div>
+          <h1><%= countUser %></h1>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>PAY</h3>
+            <i class="bx bx-chevron-right"></i>
+          </div>
+          <h1>3500.24611</h1>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>WITHDRAWAL</h3>
+            <i class="bx bx-chevron-right"></i>
+          </div>
+          <h1>1500</h1>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>ACCOUNT</h3>
+            <i class="bx bx-chevron-right"></i>
+          </div>
+          <h1> <%= account %></h1>
+        </div>
+
+      </div>
+
+
+     
+
+      <div class="composant">
+        <div class="ventes">
+            <div class="case">
+                <div class="header-case">
+                    <h2>List of transactions</h2>
+                    <button class="button">See more <span class="fa fa-arrow-right"></span></button>
+                </div>
+                <div class="body-case">
+                    <div class="tableau">
+                        <table width="100%">
+                            <thead>
+                                <tr>
+                                    <td>Members</td>
+                                    <td>Value</td>
+                                    <td>Reason</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% pay.forEach(p => { %>
+                                    <tr>
+                                      <td><%= p.user_first_name %></td>
+                                      <td><%= p.value %></td>
+                                      <td><%= p.reason %></td>
+                                    </tr>
+                                  <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+>>>>>>> 77e3c86dab866c87ba220e59e167b6d31ea1f000
             </div>
 
             <div class="main-cards">
@@ -17,6 +97,7 @@
                     </div>
                     <h1>249</h1>
                 </div>
+<<<<<<< HEAD
 
                 <div class="card">
                     <div class="card-inner">
@@ -42,6 +123,34 @@
                     <h1>56</h1>
                 </div>
 
+=======
+    
+                <div class="body-case">
+                    <% for (const user_element of user){ %>
+                    <div class="all-users">
+                        <div class="infos">
+                            <img decoding="async" src="/image/fifa.JPG" width="30" height="30">
+                            <div>
+                                <h4> <%= user_element.user_first_name %></h4>
+                                <small><%= user_element.user_name %></small>
+                            </div>
+                        </div>
+    
+                        <div class="user-contact">
+                            <a href="#<%= user_element.facebook %>">
+                                <span class="fa fa-facebook">F </span>
+                            </a>
+                            <a href="<%= user_element.email %>">
+                                <span class="fa fa-email"> M</span>
+                            </a>
+                            <a href="#<%= user_element.contact %>">
+                                <span class="fa fa-phone">P </span>
+                            </a>
+                        </div>
+                    </div>
+                    <% } %> 
+                <button class="btn">See more <span class="fa fa-arrow-right"></span></button>
+>>>>>>> 77e3c86dab866c87ba220e59e167b6d31ea1f000
             </div>
 
 
