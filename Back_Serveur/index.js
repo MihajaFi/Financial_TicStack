@@ -44,6 +44,7 @@ app.get("/", (req, res) => {
     FROM "user"
     INNER JOIN pay ON "user".id_user = pay.id_user
     ORDER BY pay.id
+    LIMIT 5
   `;
   
   const accountQuery = `SELECT total_money FROM group_account`;
