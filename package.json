@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "------------------------------------\r > This is first project of group TicStack \r  This project aims to manipulate and look at the finance of the group  \r # To work in this projet : \r - Fork this repository \r - Clone it to your local machine\r -",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
