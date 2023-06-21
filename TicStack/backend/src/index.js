@@ -1,15 +1,13 @@
 import express from "express";
-const app = express();
-import { join } from "path";
 import { router } from "./router.js";
-import { getRacine } from "./utils.js";
+import cors from "cors";
+
+const app = express();
 
 // Configure le moteur de rendu EJS
-app.set("view engine", "ejs")
-app.set("views", join(getRacine(), "views"));
-app.use(express.static(join(getRacine(), "public")));
+app.use(cors());
+app.use(express.json());
 app.use(router);
-
 
 //Connect Database 
 console.log("Connexion réussie à la base de données");
