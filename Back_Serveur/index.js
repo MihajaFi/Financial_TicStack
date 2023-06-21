@@ -25,7 +25,12 @@ app.listen(8000, () => {
   console.log("Serveur démarré (http://localhost:8000/) !");
 });
 
-
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+app.get("/income", (req, res) => {
+  res.render("income");
+});
 
 app.get("/", (req, res) => {
   const countQuery = `

@@ -1,0 +1,112 @@
+<%- include("_header") -%>
+
+<div class="firstback">
+    <img src="./assets/assets/logo tc.png" class="log" alt="Logo TicStack" />
+  </div>
+
+  <main class="containerTwo">
+    <section id="balance">
+      <h2 class="sr-only">Balance</h2>
+
+      <div class="cardTwo">
+        <h3>
+          <span>income</span>
+        </h3>
+        <p id="incomeDisplay">Ar 0000</p>
+      </div>
+
+      <div class="cardTwo">
+        <h3>
+          <span>expense</span>
+        </h3>
+        <p id="expenseDisplay">Ar 0000</p>
+      </div>
+
+      <div class="cardTwo total">
+        <h3>
+          <span>Total</span>
+        </h3>
+        <p id="totalDisplay">Ar 0000</p>
+      </div>
+    </section>
+
+    <section id="transaction">
+      <h2 class="sr-only">transaction</h2>
+
+      <a href="#" onclick="Modal.open()" class="button new">
+        + Nouveau transaction</a
+      >
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Valeur</th>
+            <th>Data</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+  <div class="modal-overlay">
+    <div class="modal">
+      <div id="form">
+        <h2>Nouveau transaction</h2>
+        <form action="" onsubmit="Form.submit(event)">
+          <div class="input-group">
+            <select class="sr-only" for="description">
+              Description
+            </select>
+            <input
+              type="text"
+              id="description"
+              name="description"
+              placeholder="Personne"
+              list="personnes"
+            />
+            <datalist id="personnes">
+              <option value="Fifaliana"></option>
+              <option value="Finaritra"></option>
+              <option value="Tsiaro"></option>
+              <option value="Feno hasina"></option>
+              <option value="Rado"></option>
+              <option value="Zo">
+                <!-- Ajoutez d'autres noms de personnes ici -->
+              </option>
+            </datalist>
+          </div>
+
+          <div class="input-group">
+            <label class="sr-only" for="amount"> Valeur </label>
+            <input
+              type="number"
+              id="amount"
+              name="amount"
+              placeholder="1500"
+            />
+
+            <small class="help"> En Ariary s'il vous plaît Merci </small>
+          </div>
+
+          <div class="input-group">
+            <label class="sr-only" for="date"> Data </label>
+            <input type="date" id="date" name="date" />
+          </div>
+
+          <div class="input-group actions">
+            <a href="#" onclick="" class="button cancel">
+              Annuler
+            </a>
+            <button>Envoyer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+
+
+<%- include("_footer") -%>
+
+

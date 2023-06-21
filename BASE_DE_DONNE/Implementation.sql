@@ -45,3 +45,11 @@ CREATE TABLE withdrawal(
   reason Varchar(250),
   id_user SERIAL REFERENCES "user"(id_user)
 );
+
+
+
+CREATE TABLE contain (
+  quantity INT NOT NULL ,
+  order_id INT REFERENCES order(id_order) ,
+  article_id INT REFERENCES article(id_article)
+);
