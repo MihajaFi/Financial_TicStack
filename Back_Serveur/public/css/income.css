@@ -42,7 +42,7 @@
     border: none;
 
     color: white;
-    background: var(--green);
+    background: var(--first-color);
 
     padding: 0;
     border-radius: 0.25rem;
@@ -81,10 +81,7 @@
     text-align: center;
 }
 
-#logo {
-    color: #FFF;
-    font-weight: 800;
-}
+
 
 
 /* ================ BALANCE ============== */
