@@ -12,6 +12,9 @@
 
 .log {
     width: 8cm;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .sr-only {
