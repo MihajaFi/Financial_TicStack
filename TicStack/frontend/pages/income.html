@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../assets/css/income.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>TicStack/Income</title>
+    <script src="../assets/js/main.js" defer></script>
+</head>
+
+<body>
+    <div class="nav" id="nav">
+        <nav class="nav__content">
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-chevron-right'></i>
+            </div>
+            <a href="#" class="nav__logo">
+                <img class="nav__logo-image" src="../assets/image/logo.png" alt="logo">
+                <span class="nav__logo-name">TicStack</span>
+            </a>
+            <div class="nav__list">
+                <a href="./home.html" class="nav__link active-link">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="nav__name">Dashboard</span>
+                </a>
+                <a href="#" class="nav__link">
+                    <i class='bx bx-file'></i>
+                    <span class="nav__name">Income & Expense</span>
+                </a>
+                <a href="#" class="nav__link">
+                    <i class='bx bx-cog'></i>
+                    <span class="nav__name">Settings</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div class="firstback">
+        <img src="../assets/image/logo.png" class="log" alt="Logo TicStack" />
+    </div>
+    <main class="containerTwo">
+        <section id="balance">
+            <h2 class="sr-only">Balance</h2>
+            <div class="cardTwo">
+                <h3>
+                    <span>income</span>
+                </h3>
+                <p id="incomeDisplay">Ar 0000</p>
+            </div>
+            <div class="cardTwo">
+                <h3>
+                    <span>expense</span>
+                </h3>
+                <p id="expenseDisplay">Ar 0000</p>
+            </div>
+            <div class="cardTwo total">
+                <h3>
+                    <span>Total</span>
+                </h3>
+                <p id="totalDisplay">Ar 0000</p>
+            </div>
+        </section>
+        <section id="transaction">
+            <h2 class="sr-only">transaction</h2>
+
+            <a href="#" onclick="Modal.open()" class="button new">
+                + Nouveau transaction</a>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Valeur</th>
+                        <th>Data</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>Nouveau transaction</h2>
+                <form action="" onsubmit="Form.submit(event)">
+                    <div class="input-group">
+                        <select class="sr-only" for="description">
+                            Description
+                        </select>
+                        <input type="text" id="description" name="description" placeholder="Personne"
+                            list="personnes" />
+                        <datalist id="personnes">
+                            <option value="Fifaliana"></option>
+                            <option value="Finaritra"></option>
+                            <option value="Tsiaro"></option>
+                            <option value="Feno hasina"></option>
+                            <option value="Rado"></option>
+                            <option value="Zo">
+                                <!-- Ajoutez d'autres noms de personnes ici -->
+                            </option>
+                        </datalist>
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="amount"> Valeur </label>
+                        <input type="number" id="amount" name="amount" placeholder="1500" />
+
+                        <small class="help"> En Ariary s'il vous plaît Merci </small>
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="date"> Data </label>
+                        <input type="date" id="date" name="date" />
+                    </div>
+
+                    <div class="input-group actions">
+                        <a href="#" onclick="" class="button cancel">
+                            Annuler
+                        </a>
+                        <button>Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
