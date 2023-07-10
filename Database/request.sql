@@ -31,3 +31,18 @@ WHERE  date_part('year',payement_date) > '2000' AND date_part('year',payement_da
 
 -- How to see all activity that we are spending our money
 SELECT reason FROM withdrawal UNIQUE;
+
+
+SELECT SUM(value) as sum_withdrawal FROM withdrawal;
+SELECT SUM(value) as sum_pay FROM pay ;
+
+
+
+select (
+    (
+        SELECT SUM(value) as sum_withdrawal FROM withdrawal
+    ) - 
+    (
+        SELECT SUM(value) as sum_pay FROM pay
+    )
+) as account;
