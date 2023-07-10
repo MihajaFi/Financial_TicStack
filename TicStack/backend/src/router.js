@@ -1,8 +1,12 @@
 import { Router } from "express";
 import { pool } from "./database.js";
+// import bodyParser from "body-parser";
 
 export const router = new Router();
 
+
+
+// =================Affichage===========
 router.get("/home", (req, res) => {
     const countQuery = `
             SELECT "user".*, pay."value",pay."reason"
@@ -34,8 +38,8 @@ router.get("/withdrawalaccount", (req, res) => {
         ) as account;
     `
     const result = {
-        sumpay : 0,
-        sumwithdrawal : 0
+        sumpay: 0,
+        sumwithdrawal: 0
     };
 
     pool.query(withdrawalQuery, (err, data) => {
@@ -44,9 +48,9 @@ router.get("/withdrawalaccount", (req, res) => {
             return res.status(500).send('Erreur de serveur');
         }
         result.sumwithdrawal = data.rows;
-        pool.query(countQuery,(err, data)=>{
-            if(err){
-                console.log(err);  
+        pool.query(countQuery, (err, data) => {
+            if (err) {
+                console.log(err);
                 return res.status(500).send('Erreur de serveur');
             };
             result.sumpay = data.rows;

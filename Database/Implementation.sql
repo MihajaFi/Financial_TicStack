@@ -21,7 +21,9 @@ CREATE TABLE "user"(
   "address" VARCHAR(300),
   contact VARCHAR(50),
   facebook TEXT,
-  email TEXT
+  email TEXT,
+  "password" VARCHAR(8) NOT NULL,
+  username VARCHAR(250) NOT NULL
 );
 
 -- group_account
