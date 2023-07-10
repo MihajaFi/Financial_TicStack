@@ -9,7 +9,12 @@ app.use(cors());
 app.use(express.json());
 app.use(router);
 
+// --
+// app.get('/', (req, res) => {
+//     res.render('index');
+// });
+// -----
+
 app.listen(8000, () => {
     console.log("Serveur démarré (http://localhost:8000/) !");
-});
-
+}); 
