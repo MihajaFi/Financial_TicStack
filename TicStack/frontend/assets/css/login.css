@@ -148,7 +148,18 @@ img{
   border-radius: .5rem;
   transition: .3s;
 }
+.login__create{
+  max-height: 95vh;
+}
+.div-input{
+max-height: 35vh;
+overflow-y: scroll;
+}
 
+.div-input::-webkit-scrollbar{
+  width: 1px;
+  background: transparent;
+}
 .login__button:hover{
   background-color: var(--first-color-dark);
 }

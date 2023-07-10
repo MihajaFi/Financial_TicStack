@@ -1,118 +1,193 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Financial TicStack</title>
 
     <!--=============== BOXICONS ===============-->
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/login.css">
-    <link rel="stylesheet" href="assets/css/income.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <link rel="stylesheet" href="assets/css/income.css" />
     <!-- =================Font awesome ===============-->
 
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/login.js" defer></script>
-
-</head>
-<body>
+  </head>
+  <body>
     <!-- Here the header and navbar of wep app -->
     <!--===============- Header Financial TicStack ==================-->
 
     <!--=============== NAV ===============-->
     <div class="nav" id="nav">
-        <nav class="nav__content">
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-chevron-right'></i>
-            </div>
-            <a href="#" class="nav__logo">
-                <img class="nav__logo-image" src="assets/image/logo.png" alt="logo">
-                <span class="nav__logo-name">TicStack</span>
-            </a>
+      <nav class="nav__content">
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-chevron-right"></i>
+        </div>
+        <a href="#" class="nav__logo">
+          <img class="nav__logo-image" src="assets/image/logo.png" alt="logo" />
+          <span class="nav__logo-name">TicStack</span>
+        </a>
 
-            <div class="nav__list">
-                <a href="http://localhost:8000/" class="nav__link active-link">
-                    <i class='bx bx-grid-alt'></i>
-                    <span class="nav__name">Dashboard</span>
-                </a>
-                <a href="http://localhost:8000/home" class="nav__link">
-                    <i class='bx bx-file'></i>
-                    <span class="nav__name">Income & Expense</span>
-                </a>
-                <a href="#" class="nav__link">
-                    <i class='bx bx-cog'></i>
-                    <span class="nav__name">Settings</span>
-                </a>
-            </div>
-        </nav>
+        <div class="nav__list">
+          <a href="http://localhost:8000/" class="nav__link active-link">
+            <i class="bx bx-grid-alt"></i>
+            <span class="nav__name">Dashboard</span>
+          </a>
+          <a href="http://localhost:8000/home" class="nav__link">
+            <i class="bx bx-file"></i>
+            <span class="nav__name">Income & Expense</span>
+          </a>
+          <a href="#" class="nav__link">
+            <i class="bx bx-cog"></i>
+            <span class="nav__name">Settings</span>
+          </a>
+        </div>
+      </nav>
     </div>
     <div class="login">
-        <div class="login__content">
-            <div class="login__img">
-                <img src = "assets/image/login.svg" alt="">
-            </div>
-
-
-            <div class="login__forms">
-                <form action="" class="login__registre" id="login-in">
-                    <h1 class="login__title">Sign In</h1>
-                    <div class="login__box">
-                        <i class='bx bx-user login__icon'></i>
-                        <input type="text" placeholder="Username" class="login__input">
-                    </div>
-                    <div class="login__box">
-                        <i class='bx bx-lock-alt login__icon'></i>
-                        <input type="password" placeholder="Password" class="login__input">
-                    </div>
-                    <a href="./pages/home.html" class="login__button">Sign In</a>
-
-                    <a href="#" class="login__forgot">Forgot password?</a>
-
-                    
-
-                    <div>
-                        <span class="login__account">Don't have an Account ?</span>
-                        <span class="login__signin" id="sign-up">Sign Up</span>
-                    </div>
-                </form>
-
-                <form action="" class="login__create none" id="login-up">
-                    <h1 class="login__title">Create Account</h1>
-        
-                    <div class="login__box">
-                        <i class='bx bx-user login__icon'></i>
-                        <input type="text" placeholder="Username" class="login__input">
-                    </div>
-        
-                    <div class="login__box">
-                        <i class='bx bx-at login__icon'></i>
-                        <input type="text" placeholder="Email" class="login__input">
-                    </div>
-        
-                    <div class="login__box">
-                        <i class='bx bx-lock-alt login__icon'></i>
-                        <input type="password" placeholder="Password" class="login__input">
-                    </div>
-        
-                    <a href="#" class="login__button">Sign Up</a>
-        
-                    <div>
-                        <span class="login__account">Already have an Account ?</span>
-                        <span class="login__signup" id="sign-in">Sign In</span>
-                    </div>
-        
-                    <div class="login__social">
-                        <a href="#" class="login__social-icon"><i class='bx bxl-facebook' ></i></a>
-                        <a href="#" class="login__social-icon"><i class='bx bxl-twitter' ></i></a>
-                        <a href="#" class="login__social-icon"><i class='bx bxl-google' ></i></a>
-                    </div>
-                </form>
-            </div>
+      <div class="login__content">
+        <div class="login__img">
+          <img src="assets/image/login.svg" alt="" />
         </div>
 
-       
+        <div class="login__forms">
+          <form action="" class="login__registre" id="login-in">
+            <h1 class="login__title">Sign In</h1>
+            <div class="login__box">
+              <i class="bx bx-user login__icon"></i>
+              <input type="text" placeholder="Username" class="login__input" />
+            </div>
+            <div class="login__box">
+              <i class="bx bx-lock-alt login__icon"></i>
+              <input
+                type="password"
+                placeholder="Password"
+                class="login__input"
+              />
+            </div>
+            <a href="./pages/home.html" class="login__button">Sign In</a>
+
+            <a href="#" class="login__forgot">Forgot password?</a>
+
+            <div>
+              <span class="login__account">Don't have an Account ?</span>
+              <span class="login__signin" id="sign-up">Sign Up</span>
+            </div>
+          </form>
+
+          <form action="" class="login__create none" id="login-up">
+            <h1 class="login__title">Create Account</h1>
+            <div class="div-input">
+              <div class="login__box">
+                <i class="bx bx-user login__icon"></i>
+                <input
+                  type="text"
+                  placeholder="Username"
+                  class="login__input"
+                />
+              </div>
+
+              <div class="login__box">
+                <i class='bx bxs-user-badge login__icon'></i>
+                <input type="file" placeholder="profil" class="login__input" />
+              </div>
+
+              <div class="login__box">
+                <i class="bx bx-at login__icon"></i>
+                <input type="email" placeholder="Email" class="login__input" />
+              </div>
+
+              <div class="login__box">
+                <i class='bx bxs-user-detail login__icon'></i>
+                <input type="text" placeholder="last_name" class="login__input" />
+              </div>
+
+              <div class="login__box">
+                <i class='bx bxs-user-detail login__icon'></i>
+                <input type="text" placeholder="first_name" class="login__input" />
+              </div>
+
+              <div class="login__box">
+                <i class='bx bx-male-female login__icon'></i>
+                <input type="text" placeholder="gender (M or F)" class="login__input" />
+              </div>
+
+              <div class="login__box">
+                <i class='bx bx-cake login__icon' ></i>
+                <input type="text" placeholder="birthday" class="login__input" />
+              </div>
+
+              <div class="login__box">
+                <i class='bx bx-briefcase-alt-2 login__icon'></i>
+                <input type="text" placeholder="occupation" class="login__input" />
+              </div>
+
+              <div class="login__box">
+                <i class='bx bxs-edit-location login__icon' ></i>
+                <input type="text" placeholder="address" class="login__input" />
+              </div>
+
+              <div class="login__box">
+                <i class='bx bx-phone login__icon'></i>
+                <input type="text" placeholder="contact" class="login__input" />
+              </div>
+
+              <div class="login__box">
+                <i class='bx bxl-facebook login__icon' ></i>
+                <input type="text" placeholder="facebook" class="login__input" />
+              </div>
+
+             
+
+              <div class="login__box">
+                <i class="bx bx-lock-alt login__icon"></i>
+                <input
+                  type="password"
+                  placeholder="Password"
+                  class="login__input"
+                />
+              </div>
+
+              <div class="login__box">
+                <i class="bx bx-lock-alt login__icon"></i>
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  class="login__input"
+                />
+              </div>
+            </div>
+            <a href="#" class="login__button">Sign Up</a>
+
+            <div>
+              <span class="login__account">Already have an Account ?</span>
+              <span class="login__signup" id="sign-in">Sign In</span>
+            </div>
+
+            <div class="login__social">
+              <a href="#" class="login__social-icon"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+              <a href="#" class="login__social-icon"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+              <a href="#" class="login__social-icon"
+                ><i class="bx bxl-google"></i
+              ></a>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </body>
+</html>
