@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { pool } from "./database.js";
-// import bodyParser from "body-parser";
+import { authentificate } from "./security/authentificate.js";
 
 export const router = new Router();
 
@@ -58,3 +58,5 @@ router.get("/withdrawalaccount", (req, res) => {
         })
     });
 });
+
+router.post("/signin", authentificate);
