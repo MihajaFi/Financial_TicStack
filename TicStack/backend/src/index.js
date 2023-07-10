@@ -10,9 +10,9 @@ app.use(express.json());
 app.use(router);
 
 // --
-// app.get('/', (req, res) => {
-//     res.render('index');
-// });
+app.get('/', (req, res) => {
+    res.send('go live to index.html');
+});
 // -----
 
 app.listen(8000, () => {

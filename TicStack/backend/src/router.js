@@ -54,19 +54,3 @@ router.get("/withdrawalaccount", (req, res) => {
         })
     });
 });
-
-
-
-router.get("/", (req, res) => {
-    const countQuery = `
-    select sum(value) as sumvalue from withdrawal;
-        `;
-
-    pool.query(countQuery, (err, data) => {
-        if (err) {
-            console.error(err);
-            return res.status(500).send('Erreur de serveur');
-        }
-        res.send(data.rows);
-    });
-});
