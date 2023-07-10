@@ -1,7 +1,7 @@
 /*=============== LINK ACTIVE ===============*/
 const linkColor = document.querySelectorAll('.nav__link')
 
-function colorLink(){
+function colorLink() {
     linkColor.forEach(l => l.classList.remove('active-link'))
     this.classList.add('active-link')
 }
@@ -10,12 +10,12 @@ function colorLink(){
 linkColor.forEach(l => l.addEventListener('click', colorLink))
 
 /*=============== SHOW HIDDEN MENU ===============*/
-const showMenu = (toggleId, navbarId) =>{
+const showMenu = (toggleId, navbarId) => {
     const toggle = document.getElementById(toggleId),
-    navbar = document.getElementById(navbarId)
+        navbar = document.getElementById(navbarId)
 
-    if(toggle && navbar){
-        toggle.addEventListener('click', ()=>{
+    if (toggle && navbar) {
+        toggle.addEventListener('click', () => {
             /* Show menu */
             navbar.classList.toggle('show-menu')
 
@@ -24,21 +24,21 @@ const showMenu = (toggleId, navbarId) =>{
         })
     }
 }
-showMenu('nav-toggle','nav')
+showMenu('nav-toggle', 'nav')
 
 // Add modal
 
 const Modal = {
-    open(){
+    open() {
         //Ouvrir la fenêtre modale
-     // Ajouter la classe active à la fenêtre modale
+        // Ajouter la classe active à la fenêtre modale
         document
             .querySelector('.modal-overlay')
             .classList
             .add('active')
 
     },
-    close(){
+    close() {
         // fermer le module 
         // supprime la classe active a la fenetre module
         document
@@ -62,17 +62,17 @@ const Form = {
 
     validateFields() {
         const { description, amount, date } = Form.getValues()
-        
-        if( description.trim() === "" || 
-            amount.trim() === "" || 
-            date.trim() === "" ) {
-                throw new Error("Veuillez remplir ce fiche ")
+
+        if (description.trim() === "" ||
+            amount.trim() === "" ||
+            date.trim() === "") {
+            throw new Error("Veuillez remplir ce fiche ")
         }
     },
 
     formatValues() {
         let { description, amount, date } = Form.getValues()
-        
+
         amount = Utils.formatAmount(amount)
 
         date = Utils.formatDate(date)

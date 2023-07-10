@@ -1,10 +1,11 @@
 # NECESSARY SELECT
 ---------
 ## Actually MCD (JMerise):
-![MCD-Actuel](Capture2.PNG)
+![MCD-Actuel](MCD.png)
 ---------
 ## Requests:
->Everyone's opinion is important to make our requests in order to better develop the web interface: 
+>Everyone's opinions are importants to make our requests in order to better develop the web interface: 
+
 
 For the moment they are the selects that we have put in evidence:
 - How much money is there?
